@@ -9,55 +9,178 @@
 <body>
     <div class="container">
         <!-- Sidebar -->
-        <div class="sidebar">
-            <h1>Dashboard</h1>
-            <nav>
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>🎯 Dashboard</h1>
+            </div>
+            <nav class="nav-main">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Messages</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Tasks</a></li>
-                    <li><a href="#">Communities</a></li>
+                    <li><a href="#" class="active">🏠 Home</a></li>
+                    <li><a href="#">👤 Profile</a></li>
+                    <li><a href="#">💬 Messages</a></li>
+                    <li><a href="#">🕒 History</a></li>
+                    <li><a href="#">✓ Tasks</a></li>
+                    <li><a href="#">👥 Communities</a></li>
                 </ul>
             </nav>
-        </div>
+            <nav class="nav-secondary">
+                <ul>
+                    <li><a href="#">⚙️ Settings</a></li>
+                    <li><a href="#">❓ Support</a></li>
+                    <li><a href="#">🔒 Privacy</a></li>
+                </ul>
+            </nav>
+        </aside>
 
         <!-- Header -->
-        <div class="header">
-            <div class="search-bar">
-                <input type="text" placeholder="Rechercher...">
+        <header class="header">
+            <div class="header-top">
+                <div class="search-bar">
+                    <label for="search">🔍</label>
+                    <input type="search" id="search" placeholder="Rechercher...">
+                </div>
+                <div class="user-actions">
+                    <button class="notification-btn">🔔</button>
+                    <div class="user-avatar">👤</div>
+                    <span class="user-name">Morgan Oakley</span>
+                </div>
             </div>
-            <div class="user-info">
-                <p>Bienvenue, <strong>Utilisateur Test</strong></p>
+            <div class="header-bottom">
+                <div class="user-greeting">
+                    <div class="user-avatar-large">👤</div>
+                    <div class="greeting-text">
+                        <p>Hi there,</p>
+                        <h2>Morgan Oakley (@morgan)</h2>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
             </div>
-        </div>
+        </header>
 
         <!-- Main Content -->
-        <div class="main-content">
+        <main class="main-content">
+            <!-- Projects Section -->
             <section class="projects">
-                <h2>Vos Projets</h2>
-                <div class="project-card">
-                    <h3>Projet 1</h3>
-                    <p>Ceci est un contenu factice pour tester la structure.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Projet 2</h3>
-                    <p>Un autre projet de test pour la mise en page.</p>
+                <h2>Your Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>Super Cool Project</h3>
+                        <p>Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+                        <div class="card-actions">
+                            <button>⭐</button>
+                            <button>👁️</button>
+                            <button>🔗</button>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3>Less Cool Project</h3>
+                        <p>Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur sapien et, facilisis dolor.</p>
+                        <div class="card-actions">
+                            <button>⭐</button>
+                            <button>👁️</button>
+                            <button>🔗</button>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3>Impossible App</h3>
+                        <p>In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit sagittis id.</p>
+                        <div class="card-actions">
+                            <button>⭐</button>
+                            <button>👁️</button>
+                            <button>🔗</button>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3>Easy Peasy App</h3>
+                        <p>Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget accumsan aliquam.</p>
+                        <div class="card-actions">
+                            <button>⭐</button>
+                            <button>👁️</button>
+                            <button>🔗</button>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3>Ad Blocker</h3>
+                        <p>Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus vel, pharetra hendrerit felis.</p>
+                        <div class="card-actions">
+                            <button>⭐</button>
+                            <button>👁️</button>
+                            <button>🔗</button>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3>Money Maker</h3>
+                        <p>Praesent convallis, libero quis congue elementum, nunc ante faucibus sapien, ac scelerisque tortor purus sit amet ex.</p>
+                        <div class="card-actions">
+                            <button>⭐</button>
+                            <button>👁️</button>
+                            <button>🔗</button>
+                        </div>
+                    </article>
                 </div>
             </section>
 
+            <!-- Sidebar Right -->
             <aside class="sidebar-right">
+                <!-- Announcements -->
                 <section class="announcements">
-                    <h3>Annonces</h3>
-                    <p>Contenu factice pour les annonces.</p>
+                    <h3>Announcements</h3>
+                    <div class="announcement-card">
+                        <article>
+                            <h4>Site Maintenance</h4>
+                            <p>Vestibulum condimentum tellus lacus, in accumsan elit maximus ac.</p>
+                        </article>
+                        <article>
+                            <h4>Community Share Day</h4>
+                            <p>Nam vel lectus tincidunt, rutrum nulla eu, ornare libero.</p>
+                        </article>
+                        <article>
+                            <h4>Updated Privacy Policy</h4>
+                            <p>Phasellus efficitur nisi eget elit consectetur, eget condimentum ante auctor.</p>
+                        </article>
+                    </div>
                 </section>
+
+                <!-- Trending -->
                 <section class="trending">
-                    <h3>Tendances</h3>
-                    <p>Contenu factice pour les tendances.</p>
+                    <h3>Trending</h3>
+                    <div class="trending-card">
+                        <article class="trending-item">
+                            <div class="trending-avatar">👤</div>
+                            <div class="trending-info">
+                                <p class="trending-username">@tegan</p>
+                                <p class="trending-project">World Peace Builder</p>
+                            </div>
+                        </article>
+                        <article class="trending-item">
+                            <div class="trending-avatar">👤</div>
+                            <div class="trending-info">
+                                <p class="trending-username">@morgan</p>
+                                <p class="trending-project">Super Cool Project</p>
+                            </div>
+                        </article>
+                        <article class="trending-item">
+                            <div class="trending-avatar">👤</div>
+                            <div class="trending-info">
+                                <p class="trending-username">@kendall</p>
+                                <p class="trending-project">Life Changing App</p>
+                            </div>
+                        </article>
+                        <article class="trending-item">
+                            <div class="trending-avatar">👤</div>
+                            <div class="trending-info">
+                                <p class="trending-username">@alex</p>
+                                <p class="trending-project">No Traffic Maker</p>
+                            </div>
+                        </article>
+                    </div>
                 </section>
             </aside>
-        </div>
+        </main>
     </div>
 </body>
 </html>
