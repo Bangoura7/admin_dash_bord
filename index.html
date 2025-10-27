@@ -4,21 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Admin</title>
+    
+    <!-- Google Fonts - Police Roboto avec plusieurs poids -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Fichier CSS principal -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- 
+        CONTENEUR PRINCIPAL 
+        Utilise CSS Grid pour créer la structure de base du dashboard
+        Grid areas: sidebar, header, main
+    -->
     <div class="container">
-        <!-- Sidebar -->
+        <!-- 
+            SIDEBAR (Barre latérale)
+            - Zone de navigation principale à gauche
+            - Utilise Grid pour organiser le logo et les sections de navigation
+            - Icônes SVG Material Design pour chaque lien
+        -->
         <aside class="sidebar">
+            <!-- Logo du Dashboard avec icône SVG -->
             <div class="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
                     <path fill="white" d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" />
                 </svg>
                 <h1>Dashboard</h1>
             </div>
+            
+            <!-- Navigation principale -->
             <nav class="nav-main">
                 <ul>
                     <li>
@@ -71,6 +88,8 @@
                     </li>
                 </ul>
             </nav>
+            
+            <!-- Navigation secondaire (Paramètres, Aide, Confidentialité) -->
             <nav class="nav-secondary">
                 <ul>
                     <li>
@@ -101,8 +120,14 @@
             </nav>
         </aside>
 
-        <!-- Header -->
+        <!-- 
+            HEADER (En-tête)
+            - Zone en haut à droite de la sidebar
+            - Divisé en deux parties : header-top et header-bottom
+            - Utilise Grid pour aligner les éléments
+        -->
         <header class="header">
+            <!-- Partie supérieure : Recherche + Actions utilisateur -->
             <div class="header-top">
                 <div class="search-bar">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -120,6 +145,8 @@
                     <span class="user-name">Abdoul bang's</span>
                 </div>
             </div>
+            
+            <!-- Partie inférieure : Salutation + Boutons d'action -->
             <div class="header-bottom">
                 <div class="user-greeting">
                     <img src="imgs/11.jpg" alt="Profil" class="user-avatar-large">
@@ -136,9 +163,19 @@
             </div>
         </header>
 
-        <!-- Main Content -->
+        <!-- 
+            MAIN CONTENT (Contenu principal)
+            - Zone principale du dashboard
+            - Grille à 2 colonnes : projects (large) + sidebar-right (étroite)
+            - Responsive : s'adapte automatiquement
+        -->
         <main class="main-content">
-            <!-- Projects Section -->
+            <!-- 
+                SECTION PROJECTS
+                - Affiche les cartes de projets
+                - Grille responsive avec auto-fit
+                - Chaque carte contient titre, description et actions
+            -->
             <section class="projects">
                 <h2>Vos Projets</h2>
                 <div class="projects-grid">
@@ -271,9 +308,13 @@
                 </div>
             </section>
 
-            <!-- Sidebar Right -->
+            <!-- 
+                SIDEBAR RIGHT (Barre latérale droite)
+                - Contient Announcements et Trending
+                - Layout Grid vertical
+            -->
             <aside class="sidebar-right">
-                <!-- Announcements -->
+                <!-- Section Annonces -->
                 <section class="announcements">
                     <h3>Annonces</h3>
                     <div class="announcement-card">
@@ -292,7 +333,7 @@
                     </div>
                 </section>
 
-                <!-- Trending -->
+                <!-- Section Tendances -->
                 <section class="trending">
                     <h3>Tendances</h3>
                     <div class="trending-card">
