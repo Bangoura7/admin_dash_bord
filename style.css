@@ -86,10 +86,11 @@ body {
     grid-area: header;
     background-color: #ffffff;
     padding: 20px 40px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     display: grid;
     grid-template-rows: auto auto;
     gap: 20px;
+    z-index: 10;
 }
 
 .header-top {
@@ -119,6 +120,13 @@ body {
     background-color: #e2e8f0;
     border-radius: 20px;
     font-size: 14px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.search-bar input:focus {
+    outline: none;
+    background-color: #cbd5e1;
+    box-shadow: 0 0 0 3px rgba(25, 146, 212, 0.1);
 }
 
 .user-actions {
@@ -217,11 +225,16 @@ body {
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .action-buttons button:hover {
     background-color: #1476ab;
+    transform: translateY(-2px);
+}
+
+.action-buttons button:active {
+    transform: translateY(0);
 }
 
 /* ===== MAIN CONTENT ===== */
@@ -248,8 +261,8 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
     align-items: start;
 }
 
@@ -257,12 +270,18 @@ body {
     background-color: white;
     padding: 30px;
     border-radius: 8px;
-    border-left: 8px solid #fbbf24;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #f59e0b;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: grid;
     grid-template-rows: auto 1fr auto;
     gap: 10px;
     min-height: 200px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .project-card h3 {
@@ -274,6 +293,7 @@ body {
 .project-card p {
     font-size: 14px;
     color: #64748b;
+    line-height: 1.6;
 }
 
 .card-actions {
@@ -333,9 +353,14 @@ body {
     background-color: white;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: grid;
     gap: 15px;
+    transition: box-shadow 0.2s;
+}
+
+.announcement-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .announcement-card article {
@@ -370,9 +395,14 @@ body {
     background-color: white;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: grid;
     gap: 20px;
+    transition: box-shadow 0.2s;
+}
+
+.trending-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .trending-item {
@@ -380,6 +410,14 @@ body {
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 15px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.trending-item:hover {
+    background-color: #f8fafc;
 }
 
 .trending-avatar {
